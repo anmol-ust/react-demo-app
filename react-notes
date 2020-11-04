@@ -1,0 +1,27 @@
+1. node_modules - folder
+    -> all packages are installed inside the node_modules folder
+
+2. public - folder - througth this folder user can access react app
+    -> index.html - root file which will render on the browser.
+        -> <div id="root"></div> - by default it is empty
+    -> mainfest.json - used when you want our app to work offline
+    -> robots.txt - to avoid overloading of web app
+
+3. src - heart of our app(actual development is happen inside that folder)
+    -> app.css - stylesheet for app component
+    -> app.jss - it is a component 
+    -> app.test.js - it is a test file for app component
+    -> index.css - common stylesheet
+    -> index.js - link the above file inside index.js & call a app component.
+    -> reportWebVitals.js - used to analyze the performance of webpage.
+    -> setupTest.js - you can setup testing library inside that file
+    -> gitignore - you can customized our file to upload on git
+
+    -> package.json - all packages are defined inside the package.json.
+    -> package-lock.json - it will be automatically created from package.json including the exact version of packages.
+
+
+Basic worflow:
+<- index.html
+    <- index.js
+        <- app.js
