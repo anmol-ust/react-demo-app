@@ -5,11 +5,10 @@
 // Make a crud app for person 
 // person has two properties like personName & personAge
 
-
 import React, { Component } from 'react';
 import Button from './Button';
+import DataTable from './DataTable';
 import './IndecisionApp-1.css';
-
 
 class IndecisionApp extends Component {
 
@@ -117,41 +116,40 @@ class IndecisionApp extends Component {
                     <Button btnType="submit" btnName={this.state.isUpdate ? "Update" : "Add"} />&nbsp;
                     <Button btnType="button" btnName="Delete All" handlerEvent={this.deleteAllHandler} />
                 </form>
-                <hr />
+                <hr/>
                 {
-                    this.state.items.length > 0
-                        ? (<p>{this.state.items.length} products are available</p>)
+                    items.length > 0
+                        ? (<p>{items.length} products are available</p>)
                         : (<p>Products are not available.</p>)
                 }
                 {
-                    items.length > 0 && (
-                        <table className="table">
-                            <thead>
-                                <tr>
-                                    <th>Sr. No.</th>
-                                    <th>Product Name</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {
-                                    items.length > 0 && items.map((value, i) => (
-                                        <tr key={i}>
-                                            <td>{i + 1}</td>
-                                            <td>{value}</td>
-                                            <td>
-                                                <Button btnType="button" btnName="Edit" handlerEvent={() => this.editHandler(i)} />&nbsp;
-                                                <Button btnType="button" btnName="Delete" handlerEvent={() => this.deleteHandler(i)} />
-                                            </td>
-                                        </tr>
-                                    ))
-                                }
-                            </tbody>
-                        </table>
-                    )
+                    items.length > 0 && <DataTable data={items} editHandler={this.editHandler} deleteHandler={this.deleteHandler} /> 
+                    // (
+                    //     <table className="table">
+                    //         <thead>
+                    //             <tr>
+                    //                 <th>Sr. No.</th>
+                    //                 <th>Product Name</th>
+                    //                 <th>Action</th>
+                    //             </tr>
+                    //         </thead>
+                    //         <tbody>
+                    //             {
+                    //                 items.length > 0 && items.map((value, i) => (
+                    //                     <tr key={i}>
+                    //                         <td>{i + 1}</td>
+                    //                         <td>{value}</td>
+                    //                         <td>
+                    //                             <Button btnType="button" btnName="Edit" handlerEvent={() => this.editHandler(i)} />&nbsp;
+                    //                             <Button btnType="button" btnName="Delete" handlerEvent={() => this.deleteHandler(i)} />
+                    //                         </td>
+                    //                     </tr>
+                    //                 ))
+                    //             }
+                    //         </tbody>
+                    //     </table>
+                    // )
                 }
-
-
             </div>
         )
     }
