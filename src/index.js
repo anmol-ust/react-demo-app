@@ -11,6 +11,7 @@ import ChildrenProps from './components/ChildrenProps';
 import LoginUser from './components/LoginUser';
 // import IndecisionApp from './components/IndecisionApp';
 import IndecisionApp from './components/IndecisionApp-1';
+import ShoppingCart from './components/ShoppingCart';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -26,8 +27,8 @@ ReactDOM.render(
       <div>This is a sub-title for children props</div>
     </ChildrenProps> */}
     {/* <LoginUser /> */}
-    <IndecisionApp />
-    
+    {/* <IndecisionApp /> */}
+    <ShoppingCart />
   </React.StrictMode>,
   document.getElementById('root')
 );
