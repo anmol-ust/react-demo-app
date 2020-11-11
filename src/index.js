@@ -12,6 +12,7 @@ import LoginUser from './components/LoginUser';
 // import IndecisionApp from './components/IndecisionApp';
 import IndecisionApp from './components/IndecisionApp-1';
 import ShoppingCart from './components/ShoppingCart';
+import Register from './components/Register';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -28,7 +29,8 @@ ReactDOM.render(
     </ChildrenProps> */}
     {/* <LoginUser /> */}
     {/* <IndecisionApp /> */}
-    <ShoppingCart />
+    {/* <ShoppingCart /> */}
+    <Register />
   </React.StrictMode>,
   document.getElementById('root')
 );
