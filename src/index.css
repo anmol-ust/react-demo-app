@@ -16,3 +16,8 @@ code {
 .fs-25{
   font-size: 25px;
 }
+
+.is-active{
+  color: red;
+}
+
