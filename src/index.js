@@ -18,6 +18,7 @@ import Gallery from './pages/Gallery';
 import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
+import Hoc from './pages/Hoc';
 import PageNotFound from './pages/PageNotFound';
 
 const Header = () => (
@@ -26,6 +27,7 @@ const Header = () => (
     <NavLink to="/" activeClassName="is-active" exact={true}>Dashboard</NavLink>&nbsp;
     <NavLink to="/profile/anmol"  activeClassName="is-active">Profile</NavLink>&nbsp;
     <NavLink to="/gallery"  activeClassName="is-active">Gallery</NavLink>&nbsp;
+    <NavLink to="/hoc"  activeClassName="is-active">Hoc</NavLink>&nbsp;
   </header>
 )
 
@@ -36,10 +38,12 @@ const routes = (
       <Route path="/" component={Dashboard} exact={true} /> {/* default route */}
       <Route path="/profile/:name" component={Profile} /> {/* parametarized route */}
       <Route path="/gallery" component={Gallery} /> {/* name route */}
+      <Route path="/hoc" component={Hoc} /> {/* name route */}
       <Route component={PageNotFound} /> {/* wildcard route */}
     </Switch>
   </BrowserRouter>
 )
+
 
 ReactDOM.render(
   routes,
